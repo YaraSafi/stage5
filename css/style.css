@@ -7,6 +7,7 @@
   --main-padding-bottom: 100px;
   --section-background: #ececec;
 }
+
 html{
   scroll-behavior: smooth;
 }
@@ -461,25 +462,31 @@ height: 500px;
 /* end Articles */
 /* Start Gallery */
 .gallery{
-  padding-top: var(--main-padding-top);
+  margin-top: 100px;
+  padding-top: 30px;
     padding-bottom: var(--main-padding-bottom);
     position: relative;
     background-color: var(--section-background);
 }
 .gallery .container{
-display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows:45% ;
   gap: 40px;
 }
 .gallery .box{
 padding: 15px;
   background-color: white;
-  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);}
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
 .gallery .box img{
-  max-width: 100%;
-  transition: var(--main-transition);
+height: 100%;
+width: 100%;
+transition: var(--main-transition);
 }
 .gallery .box .image {
+  height: 100%;
+  object-fit: cover;
   position: relative;
   overflow: hidden;
 }
@@ -522,6 +529,7 @@ padding: 15px;
  }
 .features .box .img-holder{
   position: relative;
+  overflow: hidden;
 
 }
 .features .box .img-holder::before {
@@ -592,7 +600,7 @@ padding: 15px;
   background-position: right bottom;
 }
 .features .box:hover a {
-  background-position: left bottom;
+  background-position: inherit;
   color: white;
 }
 .features .time h2::after {
@@ -1571,7 +1579,6 @@ padding: 15px;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
 }
 
 .discount .image {
@@ -1638,6 +1645,7 @@ padding: 15px;
 }
 
 .discount .form [type="submit"] {
+  margin: 20px;
   display: block;
   width: 100%;
   padding: 15px;
